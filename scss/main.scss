@@ -1,0 +1,75 @@
+@use 'variables' as *;
+@use 'functions' as *;
+@use 'mixins' as *;
+
+.desktop {
+  background: $color-white;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  align-items: flex-start;
+  justify-content: flex-start;
+  position: relative;
+  overflow: hidden;
+
+  &__header {
+    background: $color-white;
+    padding: rem(20) rem($container-padding-x) rem(20) rem($container-padding-x);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    align-self: stretch;
+    flex-shrink: 0;
+    position: relative;
+    box-shadow: $shadow-header;
+  }
+
+  &__logo {
+    flex-shrink: 0;
+    width: rem(220);
+    height: rem(19);
+    position: relative;
+  }
+
+  &__nav {
+    padding: rem(2) 0;
+    display: flex;
+    flex-direction: row;
+    gap: rem(33);
+    align-items: center;
+    justify-content: flex-start;
+    flex-shrink: 0;
+    position: relative;
+  }
+
+  &__nav-item {
+    color: $color-black;
+    text-align: left;
+    font-family: "Poppins-Regular", sans-serif;
+    font-size: rem(15);
+    line-height: rem(24);
+    font-weight: 400;
+    position: relative;
+  }
+}
+
+.btn {
+  @extend %btn-base;
+  background: $color-black;
+
+  &__text {
+    color: $color-white;
+    text-align: left;
+    font-family: "Poppins-Regular", sans-serif;
+    font-size: rem(16);
+    line-height: rem(24);
+    letter-spacing: 0.4px;
+    font-weight: 400;
+    position: relative;
+  }
+
+  &--primary {
+  }
+}
+
